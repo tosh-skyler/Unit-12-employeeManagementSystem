@@ -25,7 +25,7 @@ var connection = mysql.createConnection({
 	  inquirer
 	  	.prompt({
 			  name: "action",
-			  type: "rawlist",
+			  type: "list",
 			  message: "What would you like to do?",
 			  choices: [
 				  "View all Employees",
@@ -80,48 +80,62 @@ var connection = mysql.createConnection({
 				case "Remove Role":
 				removeRole();
 				break;
-			}
+
+				case 'Exit':
+				connection.end();
+				break;    
+			} 
 		  });
   }
 
   const viewAllEmp = () => {
-
+	console.log("viewAllEmp");
+	connection.end();
   }
 
   const viewAllEmpDep = () => {
-
+	console.log("viewAllEmpDep");
+	connection.end();
 }
 
 const  viewAllEmpManager = () => {
-
+	console.log("viewAllEmpManager");
+	connection.end();
 }
 
 const AddEmp = () => {
-
+	console.log("AddEmp");
+	connection.end();
 }
 
 const removeEmp = () => {
-
+	console.log("removeEmp");
+	connection.end();
 }
 
 const updateEmpRole = () => {
-
+	console.log("updateEmpRole");
+	connection.end();
 }
 
 const updateEmpManager = () => {
-
+	console.log("updateEmpManager");
+	connection.end();
 }
 
 const viewAllRoles = () => {
-
+	console.log("viewAllRoles");
+	connection.end();
 }
 
 const addRole = () => {
-
+	console.log("addRole");
+	connection.end();
 }
 
 const removeRole = () => {
-
+	console.log("removeRole");
+	connection.end();
 }
 
 
