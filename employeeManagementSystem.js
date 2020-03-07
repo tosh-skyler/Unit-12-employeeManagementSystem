@@ -42,37 +42,87 @@ var connection = mysql.createConnection({
 		  .then(function(answer) {
 			switch (answer.action) {
 				case "View all Employees":
+				viewAllEmp();
 				break;
 
 				case "View all Employees by Department":
+				viewAllEmpDep();
 				break;
 
 				case "View all Employees by Manager":
+				viewAllEmpManager();
 				break;
 
 				case "Add Employee":
+				AddEmp();
 				break;
 
 				case "Remove Employee":
+				removeEmp();
 				break;
 
 				case "Update Employee Role":
+				updateEmpRole();
 				break;
 
 				case "Update Employee Manager":
+				updateEmpManager();
 				break;
 
 				case "View all Roles":
+				viewAllRoles();
 				break;
 
 				case "Add Role":
+				addRole();
 				break;
 
 				case "Remove Role":
+				removeRole();
 				break;
 			}
 		  });
   }
+
+  const viewAllEmp = () => {
+
+  }
+
+  const viewAllEmpDep = () => {
+
+}
+
+const  viewAllEmpManager = () => {
+
+}
+
+const AddEmp = () => {
+
+}
+
+const removeEmp = () => {
+
+}
+
+const updateEmpRole = () => {
+
+}
+
+const updateEmpManager = () => {
+
+}
+
+const viewAllRoles = () => {
+
+}
+
+const addRole = () => {
+
+}
+
+const removeRole = () => {
+
+}
 
 
   
