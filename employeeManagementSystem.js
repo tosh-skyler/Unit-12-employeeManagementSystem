@@ -12,7 +12,7 @@ var connection = mysql.createConnection({
 	user: "root",
   
 	// Your password
-	password: "",
+	password: "101ruBBish10$",
 	database: "ems"
   });
   
@@ -36,7 +36,9 @@ var connection = mysql.createConnection({
 				  "Update Employee Role",
 				  "Update Employee Manager",
 				  "View all Roles",
-				  "Add Role"
+				  "Add Role",
+				  "Remove Role",
+				  "Exit"
 			  ]
 		  })
 		  .then(function(answer) {
@@ -81,7 +83,7 @@ var connection = mysql.createConnection({
 				removeRole();
 				break;
 
-				case 'Exit':
+				case "Exit":
 				connection.end();
 				break;    
 			} 
@@ -90,10 +92,10 @@ var connection = mysql.createConnection({
 
   const viewAllEmp = () => {
 	const query = connection.query(
-		`SELECT
-		FROM
-		INNER JOIN
-		ON`,
+		`SELECT first_name, last_name, title, salary
+		FROM employees
+		INNER JOIN roles
+		ON employees.role_id = roles.id`,
 		function(err, res){
 			if (err) throw err;
 			console.table(res);
