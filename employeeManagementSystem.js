@@ -89,8 +89,17 @@ var connection = mysql.createConnection({
   }
 
   const viewAllEmp = () => {
-	console.log("viewAllEmp");
-	connection.end();
+	const query = connection.query(
+		`SELECT
+		FROM
+		INNER JOIN
+		ON`,
+		function(err, res){
+			if (err) throw err;
+			console.table(res);
+			runSearch();
+		}
+	)
   }
 
   const viewAllEmpDep = () => {
